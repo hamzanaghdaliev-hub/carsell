@@ -1,0 +1,241 @@
+import 'package:flutter/material.dart';
+
+class SighUp extends StatefulWidget {
+  const SighUp({super.key});
+
+  @override
+  State<SighUp> createState() =>
+      _SighUpState();
+}
+
+class _SighUpState extends State<SighUp> {
+   final _emailTextController =
+      TextEditingController();
+  final _passwordTextController =
+      TextEditingController();
+  var __obscureText = true;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment:
+              CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Welcome Back",
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              "To the flutter app devolepment lesson",
+              style: TextStyle(fontSize: 20),
+            ),
+            SizedBox(height: 30),
+            TextFormField(
+              controller:
+                  _emailTextController,
+              keyboardType:
+                  TextInputType.emailAddress,
+              decoration: InputDecoration(
+                hintText: "Full Name",
+                hintStyle: TextStyle(
+                  color:
+                      const Color.fromARGB(
+                        255,
+                        0,
+                        0,
+                        0,
+                      ),
+                ),
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.black,
+                  ),
+                ),
+                enabledBorder:
+                    OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color:
+                            const Color.fromARGB(
+                              255,
+                              255,
+                              17,
+                              0,
+                            ),
+                      ),
+                    ),
+              ),
+            ),
+            SizedBox(height: 12),
+            TextFormField(
+              controller:
+                  _passwordTextController,
+                  obscureText: __obscureText,
+              keyboardType:
+                  TextInputType.text,
+              decoration: InputDecoration(
+                suffixIcon: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      __obscureText =
+                          !__obscureText;
+                    });
+                  },
+                  child: Icon(
+                    __obscureText?
+                    Icons.visibility_off:Icons.visibility,
+                    
+                  ),
+                ),
+                hintText: "Email",
+                hintStyle: TextStyle(
+                  color:
+                      const Color.fromARGB(
+                        255,
+                        0,
+                        0,
+                        0,
+                      ),
+                ),
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.black,
+                  ),
+                ),
+                enabledBorder:
+                    OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color:
+                            const Color.fromARGB(
+                              255,
+                              255,
+                              17,
+                              0,
+                            ),
+                      ),
+                    ),
+              ),
+            ),
+            SizedBox(height: 30,),
+            TextFormField(
+              controller:
+                  _passwordTextController,
+                  obscureText: __obscureText,
+              keyboardType:
+                  TextInputType.text,
+              decoration: InputDecoration(
+                suffixIcon: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      __obscureText =
+                          !__obscureText;
+                    });
+                  },
+                  child: Icon(
+                    __obscureText?
+                    Icons.visibility_off:Icons.visibility,
+                    
+                  ),
+                ),
+                hintText: "Password",
+                hintStyle: TextStyle(
+                  color:
+                      const Color.fromARGB(
+                        255,
+                        0,
+                        0,
+                        0,
+                      ),
+                ),
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.black,
+                  ),
+                ),
+                enabledBorder:
+                    OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color:
+                            const Color.fromARGB(
+                              255,
+                              255,
+                              17,
+                              0,
+                            ),
+                      ),
+                    ),
+              ),
+            ),
+            SizedBox(height: 30,),
+            TextFormField(
+              controller:
+                  _passwordTextController,
+                  obscureText: __obscureText,
+              keyboardType:
+                  TextInputType.text,
+              decoration: InputDecoration(
+                suffixIcon: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      __obscureText =
+                          !__obscureText;
+                    });
+                  },
+                  child: Icon(
+                    __obscureText?
+                    Icons.visibility_off:Icons.visibility,
+                    
+                  ),
+                ),
+                hintText: "Phone number",
+                hintStyle: TextStyle(
+                  color:
+                      const Color.fromARGB(
+                        255,
+                        0,
+                        0,
+                        0,
+                      ),
+                ),
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.black,
+                  ),
+                ),
+                enabledBorder:
+                    OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color:
+                            const Color.fromARGB(
+                              255,
+                              255,
+                              17,
+                              0,
+                            ),
+                      ),
+                    ),
+              ),
+            ),
+            SizedBox(height: 60,),
+            Center(
+              child: Container(
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(30), color: const Color.fromARGB(255, 0, 4, 255)),
+                width: 60,
+                height: 40,
+                padding: EdgeInsets.all(10),
+                child: Text("Login",style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  
+                ),),
+              ),
+            )
+          ],
+        ),
+      ),
+    ); ;
+  }
+}

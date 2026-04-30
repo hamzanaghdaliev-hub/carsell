@@ -1,4 +1,5 @@
 import 'package:carsell/authentication/login_screen.dart';
+import 'package:carsell/authentication/sigh_up.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: SighUp()
+      
     );
   }
 }
