@@ -1,3 +1,4 @@
+import 'package:carsell/widgets/botton_widgets.dart';
 import 'package:flutter/material.dart';
 
 class SighUp extends StatefulWidget {
@@ -12,6 +13,12 @@ class _SighUpState extends State<SighUp> {
    final _emailTextController =
       TextEditingController();
   final _passwordTextController =
+      TextEditingController();
+       final _addressTextController =
+      TextEditingController();
+       final _fullNameTextController =
+      TextEditingController();
+       final _phoneNumberTextController =
       TextEditingController();
   var __obscureText = true;
   @override
@@ -34,10 +41,10 @@ class _SighUpState extends State<SighUp> {
               "To the flutter app devolepment lesson",
               style: TextStyle(fontSize: 20),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 12),
             TextFormField(
               controller:
-                  _emailTextController,
+                  _fullNameTextController,
               keyboardType:
                   TextInputType.emailAddress,
               decoration: InputDecoration(
@@ -73,24 +80,11 @@ class _SighUpState extends State<SighUp> {
             SizedBox(height: 12),
             TextFormField(
               controller:
-                  _passwordTextController,
-                  obscureText: __obscureText,
+                  _emailTextController,
               keyboardType:
                   TextInputType.text,
               decoration: InputDecoration(
-                suffixIcon: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      __obscureText =
-                          !__obscureText;
-                    });
-                  },
-                  child: Icon(
-                    __obscureText?
-                    Icons.visibility_off:Icons.visibility,
-                    
-                  ),
-                ),
+             
                 hintText: "Email",
                 hintStyle: TextStyle(
                   color:
@@ -120,7 +114,7 @@ class _SighUpState extends State<SighUp> {
                     ),
               ),
             ),
-            SizedBox(height: 30,),
+            SizedBox(height: 12,),
             TextFormField(
               controller:
                   _passwordTextController,
@@ -170,28 +164,15 @@ class _SighUpState extends State<SighUp> {
                     ),
               ),
             ),
-            SizedBox(height: 30,),
+            SizedBox(height: 12,),
             TextFormField(
               controller:
-                  _passwordTextController,
-                  obscureText: __obscureText,
+                  _addressTextController,
               keyboardType:
                   TextInputType.text,
               decoration: InputDecoration(
-                suffixIcon: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      __obscureText =
-                          !__obscureText;
-                    });
-                  },
-                  child: Icon(
-                    __obscureText?
-                    Icons.visibility_off:Icons.visibility,
-                    
-                  ),
-                ),
-                hintText: "Phone number",
+              
+                hintText: "Address",
                 hintStyle: TextStyle(
                   color:
                       const Color.fromARGB(
@@ -220,22 +201,58 @@ class _SighUpState extends State<SighUp> {
                     ),
               ),
             ),
-            SizedBox(height: 60,),
-            Center(
-              child: Container(
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(30), color: const Color.fromARGB(255, 0, 4, 255)),
-                width: 60,
-                height: 40,
-                padding: EdgeInsets.all(10),
-                child: Text("Login",style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  
-                ),),
+            SizedBox(height: 12,),
+            TextFormField(
+              controller:
+                  _phoneNumberTextController,
+              keyboardType:
+                  TextInputType.text,
+              decoration: InputDecoration(
+                hintText: "Phone Number",
+                hintStyle: TextStyle(
+                  color:
+                      const Color.fromARGB(
+                        255,
+                        0,
+                        0,
+                        0,
+                      ),
+                ),
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.black,
+                  ),
+                ),
+                enabledBorder:
+                    OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color:
+                            const Color.fromARGB(
+                              255,
+                              255,
+                              17,
+                              0,
+                            ),
+                      ),
+                    ),
               ),
-            )
+            ),
+            SizedBox(height: 50,),   
+              ButtonWidgets(text1: "Sigh up"),
+              SizedBox(height: 12,),
+              RichText(text: 
+              TextSpan(
+                text: "Already Have a user?",
+                children: <TextSpan>[
+                  TextSpan(
+                    text: " Sigh in",style: TextStyle(color: Colors.blue),
+                  )
+                ]
+              )
+              )
           ],
         ),
       ),
-    ); ;
+    ); 
   }
 }

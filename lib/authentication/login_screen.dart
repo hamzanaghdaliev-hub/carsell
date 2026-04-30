@@ -1,3 +1,4 @@
+import 'package:carsell/widgets/botton_widgets.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -36,41 +37,7 @@ class _LoginScreenState
               style: TextStyle(fontSize: 20),
             ),
             SizedBox(height: 30),
-            TextFormField(
-              controller:
-                  _emailTextController,
-              keyboardType:
-                  TextInputType.emailAddress,
-              decoration: InputDecoration(
-                hintText: "Email",
-                hintStyle: TextStyle(
-                  color:
-                      const Color.fromARGB(
-                        255,
-                        0,
-                        0,
-                        0,
-                      ),
-                ),
-                border: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Colors.black,
-                  ),
-                ),
-                enabledBorder:
-                    OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color:
-                            const Color.fromARGB(
-                              255,
-                              255,
-                              17,
-                              0,
-                            ),
-                      ),
-                    ),
-              ),
-            ),
+           
             SizedBox(height: 12),
             TextFormField(
               controller:
@@ -123,16 +90,7 @@ class _LoginScreenState
             ),
             SizedBox(height: 60,),
             Center(
-              child: Container(
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(30), color: const Color.fromARGB(255, 0, 4, 255)),
-                width: 60,
-                height: 40,
-                padding: EdgeInsets.all(10),
-                child: Text("Login",style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  
-                ),),
-              ),
+              child: ButtonWidgets(text1: "Login")
             )
           ],
         ),
