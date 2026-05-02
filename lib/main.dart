@@ -1,5 +1,7 @@
 import 'package:carsell/authentication/login_screen.dart';
 import 'package:carsell/authentication/sigh_up.dart';
+import 'package:carsell/bottom_bar_screen.dart';
+import 'package:carsell/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,8 +21,8 @@ class MyApp extends StatelessWidget {
           seedColor: Colors.deepPurple,
         ),
       ),
-      debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+     debugShowCheckedModeBanner: false,
+      home: BottomBarScreen(),
       
     );
   }
