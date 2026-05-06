@@ -1,7 +1,10 @@
 import 'package:carsell/authentication/login_screen.dart';
 import 'package:carsell/authentication/sigh_up.dart';
 import 'package:carsell/home.dart';
+import 'package:carsell/my_car_page.dart';
 import 'package:flutter/material.dart';
+import 'package:carsell/authentication/login_screen.dart';
+import 'package:carsell/authentication/sigh_up.dart';
 
 /// Flutter code sample for [BottomNavigationBar].
 
@@ -24,8 +27,8 @@ class _BottomBarScreenState
   );
   static const List<Widget> _widgetOptions = <Widget>[
      Home(),
-    Text('Index 1: Business', style: optionStyle),
-    Text('Index 2: School', style: optionStyle),
+    MyCarPage(),
+    SighUp(),
     Text('Index 3: Settings', style: optionStyle),
   ];
 
@@ -38,7 +41,8 @@ class _BottomBarScreenState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
+      body: Center(
+        child: _widgetOptions.elementAt(_selectedIndex)),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -47,8 +51,8 @@ class _BottomBarScreenState
             backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.car_rental),
+            label: 'My Cars',
             backgroundColor: Colors.green,
           ),
           BottomNavigationBarItem(

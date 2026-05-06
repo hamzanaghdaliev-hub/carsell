@@ -51,7 +51,7 @@ class _LoginScreenState
                     ),
                   ),
                   Text(
-                    "To the Carsell appf",
+                    "To the Carsell app",
                     style: TextStyle(fontSize: 20),
                   ),
                   SizedBox(height: 30),
