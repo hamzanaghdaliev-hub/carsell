@@ -2,6 +2,7 @@ import 'package:carsell/authentication/login_screen.dart';
 import 'package:carsell/authentication/sigh_up.dart';
 import 'package:carsell/home.dart';
 import 'package:carsell/my_car_page.dart';
+import 'package:carsell/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:carsell/authentication/login_screen.dart';
 import 'package:carsell/authentication/sigh_up.dart';
@@ -29,7 +30,7 @@ class _BottomBarScreenState
      Home(),
     MyCarPage(),
     SighUp(),
-    Text('Index 3: Settings', style: optionStyle),
+    ProfilePage(),
   ];
 
   void _onItemTapped(int index) {
@@ -61,8 +62,8 @@ class _BottomBarScreenState
             backgroundColor: Colors.purple,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
+            icon: Icon(Icons.person),
+            label: 'Profile',
             backgroundColor: Colors.pink,
           ),
         ],

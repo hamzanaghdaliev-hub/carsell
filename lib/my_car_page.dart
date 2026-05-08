@@ -1,4 +1,5 @@
 import 'package:carsell/widgets/buyed_cars.dart';
+import 'package:carsell/widgets/profile_bar.dart';
 import 'package:flutter/material.dart';
 
 class MyCarPage extends StatefulWidget {
@@ -18,7 +19,24 @@ class _MyCarPageState
         leading: Icon(Icons.arrow_back_ios),
         title: Text("My Cars"),
       ),
-      body: Column(children: [BuyedCars(image: "assets/pexels-photo-1545743.jpeg", title: "BMW PRO MAX", description: "IDK about BMW", qty: "Qty: 1", date: "5/6/2026", price: "100,000\$")],),
+
+      body: Container(
+        padding: EdgeInsets.only(top: 12),
+        child: Column(
+          children: [
+            BuyedCars(
+              image:
+                  "assets/pexels-photo-1545743.jpeg",
+              title: "BMW PRO MAX",
+              description: "IDK about BMW",
+              qty: "Qty: 1",
+              date: "5/6/2026",
+              price: "100,000\$",
+            ),
+            
+          ],
+        ),
+      ),
     );
   }
 }

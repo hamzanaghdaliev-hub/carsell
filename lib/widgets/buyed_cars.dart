@@ -21,6 +21,7 @@ class BuyedCars extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+     
       height: 150,
       padding: EdgeInsets.fromLTRB(
         12,
@@ -38,18 +39,20 @@ class BuyedCars extends StatelessWidget {
         borderRadius: BorderRadius.circular(
           15,
         ),
+         color: const Color.fromARGB(137, 182, 182, 182),
       ),
       child: Row(
         children: [
-          Container(
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
-            child: Image.asset(
-              image,
-              width: 100,
-              height: 100,
-              fit: BoxFit.fill,
+              ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+              child: Image.asset(
+                image,
+                height: 150,
+                width: 150,
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
+            
 
           Expanded(
             child: Container(
