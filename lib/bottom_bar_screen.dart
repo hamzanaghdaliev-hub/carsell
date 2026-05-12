@@ -1,3 +1,4 @@
+import 'package:carsell/about_carsell.dart';
 import 'package:carsell/authentication/login_screen.dart';
 import 'package:carsell/authentication/sigh_up.dart';
 import 'package:carsell/home.dart';
@@ -29,7 +30,7 @@ class _BottomBarScreenState
   static const List<Widget> _widgetOptions = <Widget>[
      Home(),
     MyCarPage(),
-    SighUp(),
+    AboutCarsell(),
     ProfilePage(),
   ];
 
