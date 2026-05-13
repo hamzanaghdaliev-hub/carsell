@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "339983764695",
+    "project_id": "carsell-88df6",
+    "storage_bucket": "carsell-88df6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339983764695:android:b64edc140a64ffdaca7492",
+        "android_client_info": {
+          "package_name": "com.example.carsell"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqE88GFR7Sc7O0Midg0xEDWl_posM3Nis"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

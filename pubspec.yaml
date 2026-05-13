@@ -36,6 +36,11 @@ dependencies:
   cupertino_icons: ^1.0.8
   card_swiper: 
   flutter_iconly: 
+  firebase_auth:
+  cloud_firestore:
+  fluttertoast:
+  uuid:
+  firebase_core:
 
 
 dev_dependencies:
